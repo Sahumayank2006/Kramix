@@ -1,0 +1,16 @@
+.hero { background: var(--color-surface); }
+
+.factorsGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
+.factorCard { padding: var(--space-8); border-radius: var(--radius-xl); background: var(--color-surface); border: 1px solid var(--color-border); transition: all var(--duration-normal) var(--ease-out); }
+.factorCard:hover { border-color: rgba(var(--color-primary-rgb), 0.3); box-shadow: var(--shadow-md); }
+.factorIcon { color: var(--color-primary); margin-bottom: var(--space-4); }
+.factorCard h3 { font-size: var(--fs-h4); margin-bottom: var(--space-2); }
+.factorCard p { font-size: var(--fs-small); color: var(--color-text-secondary); line-height: var(--lh-relaxed); }
+
+.promiseSection { background: var(--color-surface); }
+.promiseGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+.promiseItem { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4); border-radius: var(--radius-md); }
+.promiseCheck { color: var(--color-success); flex-shrink: 0; }
+.promiseItem span { font-weight: var(--fw-medium); }
+
+@media (max-width: 768px) { .factorsGrid, .promiseGrid { grid-template-columns: 1fr; } }

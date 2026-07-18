@@ -1,0 +1,406 @@
+.pageWrapper {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  min-height: 100vh;
+}
+
+/* ── HERO ── */
+.heroImageSection {
+  margin-top: var(--navbar-height);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  height: 60vh;
+  min-height: 400px;
+}
+
+.heroFullImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* ── METRICS SECTION ── */
+.metricsSection {
+  padding: var(--space-12) 0;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.metricsGrid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+.counterBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.counterValue {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: var(--fw-bold);
+  background: linear-gradient(135deg, #fff, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: var(--space-2);
+}
+
+.counterLabel {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  font-weight: var(--fw-medium);
+}
+
+/* ── SECTION HEADER ── */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: var(--fw-bold);
+  line-height: 1.1;
+  margin-bottom: var(--space-4);
+}
+
+.sectionDesc {
+  font-size: var(--fs-body-lg);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── TIMELINE SECTION ── */
+.timelineSection {
+  padding: var(--space-24) 0;
+  position: relative;
+}
+
+.timelineContainer {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-12) 0;
+}
+
+.timelineTrack {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-50%);
+}
+
+.timelineFill {
+  width: 100%;
+  background: linear-gradient(to bottom, var(--color-primary), #E8A838);
+  box-shadow: 0 0 15px rgba(var(--color-primary-rgb), 0.5);
+  transform-origin: top;
+}
+
+.timelineStep {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-20);
+  position: relative;
+  width: 100%;
+}
+
+.timelineStep:last-child {
+  margin-bottom: 0;
+}
+
+.timelineNode {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.nodeInner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepCardWrapper {
+  width: 45%;
+  position: relative;
+}
+
+.stepLeft .stepCardWrapper {
+  text-align: right;
+  padding-right: var(--space-8);
+}
+
+.stepRight {
+  flex-direction: row-reverse;
+}
+
+.stepRight .stepCardWrapper {
+  text-align: left;
+  padding-left: var(--space-8);
+}
+
+.stepNumber {
+  position: absolute;
+  top: -40px;
+  font-family: var(--font-heading);
+  font-size: 6rem;
+  font-weight: var(--fw-extrabold);
+  color: rgba(255, 255, 255, 0.03);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.stepLeft .stepNumber { right: 20px; }
+.stepRight .stepNumber { left: 20px; }
+
+.stepCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s var(--ease-out);
+}
+
+.stepCard:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.stepCard h3 {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-4);
+}
+
+.stepCard p {
+  font-size: var(--fs-body);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+}
+
+.stepDeliverables {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.stepLeft .stepDeliverables { justify-content: flex-end; }
+.stepRight .stepDeliverables { justify-content: flex-start; }
+
+.deliverableBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-full);
+  color: var(--color-text);
+}
+
+/* ── WHY PROCESS WORKS (BENTO) ── */
+.whyProcessSection {
+  padding: var(--space-24) 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.whyBentoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.bentoCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.bentoCard:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(var(--color-primary-rgb), 0.3);
+  transform: translateY(-5px);
+}
+
+.bentoIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(var(--color-primary-rgb), 0.1);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-6);
+}
+
+.bentoCard h4 {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-3);
+}
+
+.bentoCard p {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* ── JOURNEY BAR ── */
+.journeySection {
+  padding: var(--space-16) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.journeyBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-full);
+  padding: var(--space-6) var(--space-12);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  color: var(--color-text-muted);
+}
+
+/* ── CTA SECTION ── */
+.premiumCta {
+  padding: var(--space-32) 0;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(var(--color-primary-rgb), 0.2);
+}
+
+.ctaBackground {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(var(--color-primary-rgb), 0.1) 0%, rgba(0,0,0,0.8) 70%);
+}
+
+.ctaTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: var(--fw-extrabold);
+  margin-bottom: var(--space-6);
+  line-height: 1.1;
+}
+
+.ctaDesc {
+  font-size: var(--fs-body-lg);
+  color: var(--color-text-secondary);
+  max-width: 700px;
+  margin: 0 auto var(--space-10);
+  line-height: 1.7;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .whyBentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .timelineTrack {
+    left: 24px;
+    transform: none;
+  }
+  .timelineNode {
+    left: 24px;
+    transform: translate(-50%, -50%);
+  }
+  .timelineStep {
+    flex-direction: row !important;
+  }
+  .stepCardWrapper {
+    width: calc(100% - 64px);
+    margin-left: auto;
+    text-align: left !important;
+    padding-left: var(--space-4) !important;
+    padding-right: 0 !important;
+  }
+  .stepDeliverables {
+    justify-content: flex-start !important;
+  }
+  .stepNumber {
+    left: 0 !important;
+    right: auto !important;
+  }
+  .metricsGrid {
+    gap: var(--space-6);
+  }
+  .counterBox {
+    min-width: 40%;
+  }
+  .whyBentoGrid {
+    grid-template-columns: 1fr;
+  }
+  .ctaButtons {
+    flex-direction: column;
+  }
+  .journeyBar {
+    border-radius: var(--radius-2xl);
+    flex-direction: column;
+    text-align: center;
+  }
+  .journeyBar svg {
+    transform: rotate(90deg);
+  }
+}

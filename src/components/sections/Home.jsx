@@ -342,14 +342,14 @@ function TeamTeaser() {
       role: "Founder",
       image: "/images/projects/mayank.png",
       bio: "Visionary leader driving innovation and building technology that genuinely improves lives.",
-      linkedin: "#"
+      linkedin: "https://www.linkedin.com/in/mrmayanksahu/"
     },
     {
       name: "Vaibhav",
       role: "Co-founder",
       image: "/images/projects/vaibhav.jpeg",
       bio: "Strategic thinker focusing on scalable solutions and operational excellence.",
-      linkedin: "#"
+      linkedin: "https://www.linkedin.com/in/vaibhav-singh-rajawat/"
     }
   ];
 

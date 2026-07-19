@@ -73,7 +73,7 @@ export default function QuoteModal({ isOpen, onClose }) {
                 id="quote-name"
                 name="name"
                 type="text"
-                placeholder="John Doe"
+                placeholder="Rahul Sharma"
                 value={formData.name}
                 onChange={handleChange}
                 required

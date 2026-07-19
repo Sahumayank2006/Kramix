@@ -1017,8 +1017,8 @@
 }
 @media (min-width: 768px) {
   .teamGridNew {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 900px;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
     margin: 0 auto;
   }
 }
@@ -1100,6 +1100,30 @@
   font-size: var(--fs-small);
   color: var(--color-text-secondary);
   line-height: 1.6;
+}
+.teamSocialsNew {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+  justify-content: center;
+}
+.teamLinkedin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.teamLinkedin:hover {
+  background: #0077b5;
+  border-color: #0077b5;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 119, 181, 0.4);
 }
 
 /* TESTIMONIALS REDESIGN */

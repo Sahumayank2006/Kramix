@@ -18,6 +18,24 @@ import styles from './Home.module.css';
 
 const iconMap = { Globe, Brain, Smartphone, Palette, Database, Rocket };
 
+const LinkedinIcon = ({ size = 20 }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+  >
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+  </svg>
+);
+
 /* ─── HERO ─── */
 function HeroSection({ onQuoteOpen }) {
   return (
@@ -313,16 +331,25 @@ function TeamTeaser() {
 
   const team = [
     {
+      name: "Jyotima Tomar",
+      role: "Full Stack Developer",
+      image: "/images/projects/jyotima.jpeg",
+      bio: "Talented developer building scalable, reliable, and high-performance applications.",
+      linkedin: "https://www.linkedin.com/in/jyotimatomar/"
+    },
+    {
       name: "Mayank Sahu",
       role: "Founder",
       image: "/images/projects/mayank.png",
-      bio: "Visionary leader driving innovation and building technology that genuinely improves lives."
+      bio: "Visionary leader driving innovation and building technology that genuinely improves lives.",
+      linkedin: "#"
     },
     {
       name: "Vaibhav",
       role: "Co-founder",
       image: "/images/projects/vaibhav.jpeg",
-      bio: "Strategic thinker focusing on scalable solutions and operational excellence."
+      bio: "Strategic thinker focusing on scalable solutions and operational excellence.",
+      linkedin: "#"
     }
   ];
 
@@ -346,6 +373,13 @@ function TeamTeaser() {
               <h3 className={styles.teamNameNew}>{member.name}</h3>
               <p className={styles.teamRoleNew}>{member.role}</p>
               <p className={styles.teamBioNew}>{member.bio}</p>
+              {member.linkedin && (
+                <div className={styles.teamSocialsNew}>
+                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className={styles.teamLinkedin} aria-label={`${member.name} LinkedIn`}>
+                    <LinkedinIcon size={20} />
+                  </a>
+                </div>
+              )}
             </div>
           ))}
         </div>

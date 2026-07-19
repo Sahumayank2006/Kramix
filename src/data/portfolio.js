@@ -6,7 +6,7 @@ export const projects = [
     category: 'SaaS Platform',
     techStack: ['Next.js', 'React', 'Node.js', 'MongoDB', 'Cloud'],
     image: 'Nexify.png',
-    link: 'https://nexify.vercel.app',
+    link: 'https://indianexify.vercel.app',
     featured: true,
   },
   {
@@ -16,7 +16,7 @@ export const projects = [
     category: 'Education Technology',
     techStack: ['Next.js', 'AI', 'Node.js', 'MongoDB'],
     image: 'Educore.png',
-    link: 'https://educore.vercel.app',
+    link: 'https://indianexify.vercel.app/educonnect',
     featured: true,
   },
   {
@@ -26,7 +26,7 @@ export const projects = [
     category: 'Business Automation',
     techStack: ['React', 'Node', 'Express', 'MySQL', 'AI'],
     image: 'Retailcore.png',
-    link: 'https://retailcore.vercel.app',
+    link: 'https://indianexify.vercel.app/smartbill',
     featured: true,
   },
   {
@@ -46,7 +46,7 @@ export const projects = [
     category: 'University Automation',
     techStack: ['React', 'Firebase', 'Automation', 'AI'],
     image: 'od.png',
-    link: 'https://odautomator.vercel.app',
+    link: 'https://odautomatioacc.vercel.app/',
     featured: false,
   },
   {

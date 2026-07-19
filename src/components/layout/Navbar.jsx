@@ -72,11 +72,9 @@ export default function Navbar() {
             />
 
             <div className={styles.logoWrapper}>
-              <Link href="/">
-                <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
-                  <Logo />
-                </motion.div>
-              </Link>
+              <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
+                <Logo />
+              </motion.div>
             </div>
 
             <div className={styles.navLinks}>

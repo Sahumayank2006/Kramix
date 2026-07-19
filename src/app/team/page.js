@@ -119,13 +119,36 @@ export default function TeamPage() {
           className={styles.sectionHeader}
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
         >
-          <h2 className={styles.sectionTitle}>Meet The Founders</h2>
+          <h2 className={styles.sectionTitle}>Meet Our Core Team</h2>
           <p className={styles.sectionSubtitle}>
             Built by people who believe technology should solve real problems.
           </p>
         </motion.div>
 
         <div className={styles.foundersGrid}>
+          {/* Jyotima Card */}
+          <motion.div 
+            className={styles.founderCard}
+            initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
+          >
+            <div className={styles.founderImageWrapper}>
+              <img src="/images/projects/jyotima.jpeg" alt="Jyotima Tomar" className={styles.founderImage} />
+            </div>
+            <h3 className={styles.founderName}>Jyotima Tomar</h3>
+            <p className={styles.founderRole}>Full Stack Developer</p>
+            <p className={styles.founderBio}>
+              Jyotima is a talented developer building scalable, reliable, and high-performance applications. With a strong eye for detail, she ensures every line of code translates into exceptional digital experiences.
+            </p>
+            <div className={styles.expertiseTags}>
+              {['Frontend', 'Backend', 'Database', 'React', 'Node.js', 'Problem Solving'].map(tag => (
+                <span key={tag} className={styles.expertiseTag}>{tag}</span>
+              ))}
+            </div>
+            <a href="https://www.linkedin.com/in/jyotimatomar/" target="_blank" rel="noopener noreferrer" className={styles.founderCta}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '4px' }}><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg> Connect with Jyotima <ArrowRight size={14} />
+            </a>
+          </motion.div>
+
           {/* Mayank Card */}
           <motion.div 
             className={styles.founderCard}

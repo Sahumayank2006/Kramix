@@ -788,7 +788,22 @@
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
-    padding: calc(var(--navbar-height) + var(--space-12)) 0 var(--space-12);
+    margin-top: 110px; /* Increased to completely clear navbar */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .heroImageFull {
+    position: relative;
+    height: auto;
+    object-fit: contain;
+  }
+  .heroContentWrapper {
+    position: relative;
+    bottom: auto;
+    width: 100%;
+    height: auto;
+    padding: var(--space-6) 0;
   }
   .heroTitle {
     font-size: clamp(2.5rem, 10vw, 4rem);
@@ -1581,4 +1596,13 @@
 
 @keyframes march {
   to { stroke-dashoffset: -1000; }
+}
+
+@media (max-width: 768px) {
+  .heroImageFull { position: relative !important; }
+  .heroContentWrapper { position: relative !important; padding-top: 1rem !important; }
+}
+
+@media (max-width: 768px) {
+  .heroContentWrapper { height: auto !important; }
 }

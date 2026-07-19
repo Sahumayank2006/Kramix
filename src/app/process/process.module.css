@@ -10,17 +10,13 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  height: 60vh;
-  min-height: 400px;
 }
 
 .heroFullImage {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  inset: 0;
-  z-index: 1;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 /* ── METRICS SECTION ── */
